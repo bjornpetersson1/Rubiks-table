@@ -73,4 +73,38 @@ public class Print
             }
         }
     }
+        private static Dictionary<int, Fieldvalue> FieldLookup = new()
+    {
+        {1, Field.Top}, {2, Field.Top}, {3, Field.Top}, {4, Field.Top},
+        {5, Field.Left}, {6, Field.Left}, {7, Field.Left}, {8, Field.Left},
+        {9, Field.Mid}, {10, Field.Mid}, {11, Field.Mid}, {12, Field.Mid},
+        {13, Field.Right}, {14, Field.Right}, {15, Field.Right}, {16, Field.Right},
+        {17, Field.Bottom}, {18, Field.Bottom}, {19, Field.Bottom}, {20, Field.Bottom},
+    };
+    public static bool IsSolved(int[] placement)
+    {
+        for (int i = 0; i < placement.Length; i++)
+        {
+            var currentField = FieldLookup[placement[i]];
+            ConsoleColor expectedColor;
+
+            if (i >= 0 && i <= 3)
+                expectedColor = Field.Top.GetColor();
+            else if (i >= 4 && i <= 7)
+                expectedColor = Field.Left.GetColor();
+            else if (i >= 8 && i <= 11)
+                expectedColor = Field.Mid.GetColor();
+            else if (i >= 12 && i <= 15)
+                expectedColor = Field.Right.GetColor();
+            else if (i >= 16 && i <= 19)
+                expectedColor = Field.Bottom.GetColor();
+            else
+                return false;
+
+            if (currentField.GetColor() != expectedColor)
+                return false;
+        }
+
+        return true;
+    }
 }
