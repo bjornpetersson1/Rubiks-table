@@ -27,7 +27,7 @@ public static class InfoGraphics
         Console.Write($"you made {moves} moves");
         Console.ResetColor();
     }
-    public static void Erase(int row)
+    public static void EraseRow(int row)
     {
         Console.SetCursorPosition(0, row);
         Console.Write(new string(' ', Console.BufferWidth));

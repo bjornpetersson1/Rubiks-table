@@ -1,8 +1,8 @@
 ﻿using Rubik_s_table_2._0;
 while(true)
 {
-    InfoGraphics.Erase(10);
-    InfoGraphics.Erase(11);
+    InfoGraphics.EraseRow(10);
+    InfoGraphics.EraseRow(11);
     InfoGraphics.moves = 0;
     var printer = new Print();
     var move = new Move();
