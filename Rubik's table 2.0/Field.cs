@@ -6,14 +6,15 @@ using System.Threading.Tasks;
 
 namespace Rubik_s_table_2._0;
 
-struct Fields
+public static class Field
 {
-    public Fieldvalue Top { get; set; }
-    public Fieldvalue Mid { get; set; }
-    public Fieldvalue Bottom { get; set; }
-    public Fieldvalue Left { get; set; }
-    public Fieldvalue Right { get; set; }
-    public Fields()
+    public static Fieldvalue Top { get; set; }
+    public static Fieldvalue Mid { get; set; }
+    public static Fieldvalue Bottom { get; set; }
+    public static Fieldvalue Left { get; set; }
+    public static Fieldvalue Right { get; set; }
+
+    static Field()
     {
         Top = new Fieldvalue(ConsoleColor.White);
         Mid = new Fieldvalue(ConsoleColor.Red);
@@ -21,4 +22,5 @@ struct Fields
         Left = new Fieldvalue(ConsoleColor.Green);
         Right = new Fieldvalue(ConsoleColor.Yellow);
     }
+    
 }

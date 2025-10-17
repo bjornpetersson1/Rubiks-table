@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Rubik_s_table_2._0;
 
-struct Fieldvalue
+public struct Fieldvalue
 {
     public char Symbol { get; set; }
     public ConsoleColor MyColor { get; set; }
@@ -14,5 +14,15 @@ struct Fieldvalue
     {
         Symbol = '▓';
         MyColor = myColor;
+    }
+    public ConsoleColor GetColor()
+    {
+        return MyColor;
+    }
+    public void Write()
+    {
+        Console.ForegroundColor = MyColor;
+        Console.Write(Symbol);
+        Console.ResetColor();
     }
 }
