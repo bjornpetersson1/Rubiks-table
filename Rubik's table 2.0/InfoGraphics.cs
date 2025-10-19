@@ -9,10 +9,38 @@ namespace Rubik_s_table_2._0;
 public static class InfoGraphics
 {
     public static int moves = 0;
+    public static int PrintWelcomeAndStart()
+    {
+        int writingSpeed = 50;
+        Console.ForegroundColor = ConsoleColor.DarkRed;
+        string title = "RUBIK'S TABLE";
+        string info = "use WASD and arrow keys to move";
+        string instruction = "please enter desired scramble depth: ";
+        Console.SetCursorPosition(3, 1);
+        foreach (var s in title)
+        {
+            Console.Write(s);
+            Thread.Sleep(writingSpeed);
+        }
+        Console.SetCursorPosition(2, 10);
+        foreach (var s in info)
+        {
+            Console.Write(s);
+            Thread.Sleep(writingSpeed);
+        }
+        Console.SetCursorPosition(0, 11);
+        foreach (var s in instruction)
+        {
+            Console.Write(s);
+            Thread.Sleep(writingSpeed);
+        }
+        Console.CursorVisible = true;
+        return int.Parse(Console.ReadLine());
+    }
     public static void PrintStatistics()
     {
-        Console.SetCursorPosition(6, 10);
         Console.ForegroundColor = ConsoleColor.DarkRed;
+        Console.SetCursorPosition(6, 10);
         Console.Write($"moves: {moves}");
         Console.ResetColor();
         moves++;
