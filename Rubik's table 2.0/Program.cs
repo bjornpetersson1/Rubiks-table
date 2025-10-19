@@ -6,6 +6,7 @@ var printer = new Print();
 var move = new Move();
 printer.Write(move.Placement);
 int scrambleDepth = InfoGraphics.PrintWelcomeAndStart();
+Console.CursorVisible = false;
 for (global::System.Int32 i = 0; i < scrambleDepth; i++)
 {
     move.MakeMove(move.Scramble());

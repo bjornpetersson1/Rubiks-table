@@ -37,38 +37,38 @@ public class Print
     }
     public void Write(int[] placement)
     {
-        Console.SetCursorPosition(8, 3);
+        Console.SetCursorPosition(16, 3);
         for (int i = 1; i <= 20; i++)
         {
             FieldsPlacement[placement[i-1]]();
             switch (i)
             {
                 case 2:
-                    Console.SetCursorPosition(8, 4);
+                    Console.SetCursorPosition(16, 4);
                     break;
                 case 4:
-                    Console.SetCursorPosition(6, 5);
+                    Console.SetCursorPosition(14, 5);
                     break;
                 case 6:
-                    Console.SetCursorPosition(6, 6);
+                    Console.SetCursorPosition(14, 6);
                     break;
                 case 8:
-                    Console.SetCursorPosition(8, 5);
+                    Console.SetCursorPosition(16, 5);
                     break;
                 case 10:
-                    Console.SetCursorPosition(8, 6);
+                    Console.SetCursorPosition(16, 6);
                     break;
                 case 12:
-                    Console.SetCursorPosition(10, 5);
+                    Console.SetCursorPosition(18, 5);
                     break;
                 case 14:
-                    Console.SetCursorPosition(10, 6);
+                    Console.SetCursorPosition(18, 6);
                     break;
                 case 16:
-                    Console.SetCursorPosition(8, 7);
+                    Console.SetCursorPosition(16, 7);
                     break;
                 case 18:
-                    Console.SetCursorPosition(8, 8);
+                    Console.SetCursorPosition(16, 8);
                     break;
             }
         }

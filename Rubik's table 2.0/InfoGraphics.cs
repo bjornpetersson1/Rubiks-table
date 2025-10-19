@@ -13,10 +13,10 @@ public static class InfoGraphics
     {
         int writingSpeed = 50;
         Console.ForegroundColor = ConsoleColor.DarkRed;
-        string title = "RUBIK'S TABLE";
+        string title = "RUBIK'S  TABLE";
         string info = "use WASD and arrow keys to move";
         string instruction = "please enter desired scramble depth: ";
-        Console.SetCursorPosition(3, 1);
+        Console.SetCursorPosition(10, 1);
         foreach (var s in title)
         {
             Console.Write(s);
@@ -40,7 +40,7 @@ public static class InfoGraphics
     public static void PrintStatistics()
     {
         Console.ForegroundColor = ConsoleColor.DarkRed;
-        Console.SetCursorPosition(6, 10);
+        Console.SetCursorPosition(13, 10);
         Console.Write($"moves: {moves}");
         Console.ResetColor();
         moves++;
