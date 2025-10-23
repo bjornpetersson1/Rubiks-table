@@ -2,9 +2,9 @@
 
   A simple game made for Console inspired by the Rubik's cube
 
-  ## How to play: 
-  The goal is to move the tiles to their starting position  
-  Choose scramble depth (often the least amount of moves to succeed but if you're lucky you can make it in fewer moves)  
+  ### How to play: 
+  Move the tiles back to their starting position  
+  Choose scramble depth  
   Use the keyboard to make moves  
   Get the highest score  
 
